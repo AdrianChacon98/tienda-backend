@@ -1,0 +1,95 @@
+spring:
+  main:
+    allow-circular-references: true
+  application:
+    name: store
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost/storeonline?serverTimezone=UTC
+    dbname: storeonline
+    username: root
+    password: $chancho2012$
+    tomcat:
+      max-wait: 30000
+      max-active: 50
+      max-idle: 20
+      min-idle: 15
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: cursosprogramacion44@gmail.com
+    password: swhbepyoroogybid
+    protocol: smtp
+    tls: true
+    default-encoding: UTF-8
+    properties:
+      mail:
+        debug: false
+        smtp:
+          ssl:
+            trust: "smtp.gmail.com"
+            enable: false
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+          socketFactoryFallback: false
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+  #devtools: #LiveReload
+    #restart:
+      #additional-paths: .
+
+server:
+  port: 8083
+
+
+#formula 1000*60*30=30min
+jwt:
+  secretKey: esto#$%&&/(/esunaCADENajdjojeyu())/&T%%$$##""!!"#$%&/)==)(/&%$#\\
+  tokenTimeMs: 1800000
+
+
+
+#you need to generate this password in you gmail account and part of security
+
+#email smtp
+#spring.mail.host=smtp.gmail.com
+  
+#spring.mail.port=587
+#spring.mail.username=cursosprogramacion44@gmail.com
+  
+#spring.mail.password=$chancho2012$
+  
+#spring.mail.properties.mail.smtp.auth=true
+  
+#spring.mail.properties.mail.smtp.starttls.enable=true
+
+
+
+
+
+
+
+
+
+#spring.mail.host=smtp.gmail.com
+#spring.mail.port=587
+#spring.mail.username=username
+#spring.mail.password=password
+
+# Other properties
+#spring.mail.properties.mail.smtp.auth=true
+#spring.mail.properties.mail.smtp.connectiontimeout=5000
+#spring.mail.properties.mail.smtp.timeout=5000
+#spring.mail.properties.mail.smtp.writetimeout=5000
+
+# TLS , port 587
+#spring.mail.properties.mail.smtp.starttls.enable=true
+
+# SSL, post 465
+#spring.mail.properties.mail.smtp.socketFactory.port = 465
+#spring.mail.properties.mail.smtp.socketFactory.class = javax.net.ssl.SSLSocketFactory
